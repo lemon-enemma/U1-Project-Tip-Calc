@@ -17,5 +17,6 @@ public class Main {
         double tipIncents = (tipPercentdoub) * totalBill * 100;
         double tipIndollars = (double)((int) (tipIncents + 0.5)) / 100;
         System.out.println(tipIndollars);
+        System.out.println("testing commits");
     }
 }
