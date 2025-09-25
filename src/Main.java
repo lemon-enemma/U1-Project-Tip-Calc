@@ -18,6 +18,5 @@ public class Main {
         int tipIncents = (int) (tipUnrounded * 100 + 0.5);
         double tipIndollars = (double) tipIncents/ 100;
         System.out.println(tipIndollars);
-        System.out.println("testing commits");
     }
 }
