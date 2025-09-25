@@ -14,8 +14,9 @@ public class Main {
         System.out.print("Enter the number of people in your party: ");
         int partyPeople = scan.nextInt();
         //input part ends. calc total tip below
-        double tipIncents = (tipPercentdoub) * totalBill * 100;
-        double tipIndollars = (double)((int) (tipIncents + 0.5)) / 100;
+        double tipUnrounded = (tipPercentdoub) * totalBill;
+        int tipIncents = (int) (tipUnrounded * 100 + 0.5);
+        double tipIndollars = (double) tipIncents/ 100;
         System.out.println(tipIndollars);
     }
 }
