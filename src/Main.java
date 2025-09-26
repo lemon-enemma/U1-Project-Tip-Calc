@@ -15,8 +15,18 @@ public class Main {
         int partyPeople = scan.nextInt();
         //input part ends. calc total tip below
         double tipUnrounded = (tipPercentdoub) * totalBill;
-        int tipIncents = (int) (tipUnrounded * 100 + 0.5);
-        double tipIndollars = (double) tipIncents/ 100;
-        System.out.println(tipIndollars);
+        double tipIndollars = tipUnrounded % 100;
+        double tipIncents = (tipUnrounded - tipUnrounded % 100) * 100;
+        int tipIncentsRound = (int) (tipIncents + 0.5);
+        double tipCents = tipIncentsRound/100;
+        System.out.println("The total tip is $" + tipIndollars + "." + tipCents);
+        //calc total bill including tip
+        double totalPlustip = totalBill + tipIndollars;
+        System.out.println("The total bill plus tip is $" + totalPlustip);
+        //calc tip per person
+        tipIndollars = 42.70;
+        double individTipunrounded = tipIndollars / partyPeople * 100;
+        double tipPerperson = ((double) ((int) individTipunrounded+5))/100;
+        System.out.println(tipPerperson);
     }
 }
