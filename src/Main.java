@@ -14,7 +14,7 @@ public class Main {
         // Input part ends. Calculate the total tip.
         double tipUnrounded = (tipPercent) * totalBill; // tipUnrounded stores the tip in cents. Ex. if the tip is $4.99, tipUnrounded will store 499.
         int tipInCentsInt = (int) ((tipUnrounded % 100) + 0.5); // tipInCentsInt is set to the number of cents in the tip, equal to tipUnrounded % 100, rounded to the nearest whole number, and cast as an integer.
-        int tipInDollarsInt = (int) (tipUnrounded - tipUnrounded % 100)/100; // This line subtracts the cents from the total tip so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars in dollars in tipInDollarsInt.
+        int tipInDollarsInt = (int) (tipUnrounded - tipUnrounded % 100)/100; // This line subtracts the cents from the total tip so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars as dollars in tipInDollarsInt.
         String tipInCentsString;
             if (tipInCentsInt < 10) { // Need to put a zero before the cents integer if there's less than 10 cents. Ex. $0.03 instead of $0.3.
                 tipInCentsString = "0" + tipInCentsInt; // If the value in cents is less than 10, this line creates a String variable with a 0 in front of the tipIncentsInt integer.
@@ -24,7 +24,7 @@ public class Main {
         // Calculate the total bill including the tip.
         double totalPlusTipUnrounded = (totalBill + tipUnrounded/100) * 100;
         int totalPlusTipCentsInt = (int) ((totalPlusTipUnrounded % 100) + 0.5); // totalPlusTipCentsInt is set to the number of cents in the total bill plus tip, equal to totalPlusTipUnrounded % 100, rounded to the nearest whole number, and cast as an integer.
-        int totalPlusTipDollarsInt = (int) (totalPlusTipUnrounded - totalPlusTipUnrounded % 100)/100; // This line subtracts the cents from the total bill plus tip so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars in dollars in totalPlusTipDollarsInt.
+        int totalPlusTipDollarsInt = (int) (totalPlusTipUnrounded - totalPlusTipUnrounded % 100)/100; // This line subtracts the cents from the total bill plus tip so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars as dollars in totalPlusTipDollarsInt.
         String totalPlusTipCentsString;
             if (totalPlusTipCentsInt < 10) { // Need to put a zero before the cents integer if there's less than 10 cents. Ex. $0.03 instead of $0.3.
                 totalPlusTipCentsString = "0" + totalPlusTipCentsInt;
@@ -36,7 +36,7 @@ public class Main {
         // Calculate the tip each person pays.
         double tipPerPersonUnrounded = (tipUnrounded/100/partyPeople) * 100;
         int tipPerPersonCentsInt = (int) ((tipPerPersonUnrounded % 100) + 0.5); // tipPerPersonCentsInt is set to the number of cents in the total tip per person, equal to tipPerPersonUnrounded % 100, rounded to the nearest whole number, and cast as an integer.
-        int tipPerPersonDollarsInt = (int) (tipPerPersonUnrounded - tipPerPersonUnrounded % 100)/100; // This line subtracts the cents from the tip per person so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars in dollars in tipPerPersonDollarsInt.
+        int tipPerPersonDollarsInt = (int) (tipPerPersonUnrounded - tipPerPersonUnrounded % 100)/100; // This line subtracts the cents from the tip per person so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars as dollars in tipPerPersonDollarsInt.
         String tipPerPersonCentsString;
             if (tipPerPersonCentsInt < 10) { // Need to put a zero before the cents integer if there's less than 10 cents. Ex. $0.03 instead of $0.3.
                 tipPerPersonCentsString = "0" + tipPerPersonCentsInt;
@@ -48,7 +48,7 @@ public class Main {
         // Calculate the total each person pays.
         double totalPerPersonUnrounded = (tipPerPersonUnrounded /100 + totalBill/partyPeople) * 100;
         int totalPerPersonCentsInt = (int) ((totalPerPersonUnrounded % 100) + 0.5); // totalPerPersonCentsInt is set to the number of cents in the total per person, equal to totalPerPersonUnrounded % 100, rounded to the nearest whole number, and cast as an integer.
-        int totalPerPersonDollarsInt = (int) (totalPerPersonUnrounded - totalPerPersonUnrounded % 100)/100; // This line subtracts the cents from the total per person so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars in dollars in totalPerPersonDollarsInt.
+        int totalPerPersonDollarsInt = (int) (totalPerPersonUnrounded - totalPerPersonUnrounded % 100)/100; // This line subtracts the cents from the total per person so that we have the number of dollars in cents. It is then divided by 100 to store the number of dollars as dollars in totalPerPersonDollarsInt.
         String totalPerPersonCentsString;
             if (totalPerPersonCentsInt < 10) { // Need to put a zero before the cents integer if there's less than 10 cents. Ex. $0.03 instead of $0.3.
                 totalPerPersonCentsString = "0" + totalPerPersonCentsInt;
