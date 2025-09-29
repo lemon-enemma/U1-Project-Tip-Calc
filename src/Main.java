@@ -40,10 +40,10 @@ public class Main {
         String tipPerpersonCentsstring;
             if (tipPerpersonCentsint < 10) {
                 tipPerpersonCentsstring = "0" + tipPerpersonCentsint;
-                System.out.println("The tip per person is $" + tipPerpersonDollarsint + "." + tipPerpersonCentsstring + ".");
+                System.out.println("The tip each person pays is $" + tipPerpersonDollarsint + "." + tipPerpersonCentsstring + ".");
             }
             else {
-                System.out.println("The tip per person is $" + tipPerpersonDollarsint + "." + tipPerpersonCentsint + ".");
+                System.out.println("The tip each person pays is $" + tipPerpersonDollarsint + "." + tipPerpersonCentsint + ".");
             }
         // Calculate the total each person pays.
         double totalPerpersonUnrounded = (tipPerpersonUnrounded/100 + totalBill/partyPeople) * 100;
@@ -52,10 +52,10 @@ public class Main {
         String totalPerpersonCentsstring;
             if (totalPerpersonCentsint < 10) {
                 totalPerpersonCentsstring = "0" + totalPerpersonCentsint;
-                System.out.println("The total bill plus tip per person is $" + totalPerpersonDollarsint + "." + totalPerpersonCentsstring + ".");
+                System.out.println("The total bill, plus tip, per person is $" + totalPerpersonDollarsint + "." + totalPerpersonCentsstring + ".");
             }
             else {
-                System.out.println("The total bill plus tip per person is $" + totalPerpersonDollarsint + "." + totalPerpersonCentsint + ".");
+                System.out.println("The total bill, plus tip, per person is $" + totalPerpersonDollarsint + "." + totalPerpersonCentsint + ".");
             }
     }
 }
